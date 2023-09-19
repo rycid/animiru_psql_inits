@@ -10,7 +10,7 @@ async function createMessagesTable(client: any) {
           receiver_id INT NOT NULL,
           body TEXT NOT NULL,
           date_sent TIMESTAMP NOT NULL,
-          is_read BOOLEAN NOT NULL,
+          is_read BOOLEAN DEFAULT FALSE NOT NULL,
           is_deleted BOOLEAN NOT NULL,
           FOREIGN KEY (sender_id) REFERENCES users (id),
           FOREIGN KEY (receiver_id) REFERENCES users (id)

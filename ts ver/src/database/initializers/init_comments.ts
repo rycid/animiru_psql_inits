@@ -8,7 +8,7 @@ async function createCommentsTable(client: any) {
           id SERIAL PRIMARY KEY,
           user_id INT NOT NULL,
           episode_id INT NOT NULL,
-          body VARCHAR(255) NOT NULL,
+          body TEXT NOT NULL,
           likes INT DEFAULT 0,
           dislikes INT DEFAULT 0,
           reports INT DEFAULT 0,
@@ -17,7 +17,7 @@ async function createCommentsTable(client: any) {
           is_deleted BOOLEAN DEFAULT FALSE,
           is_edited BOOLEAN DEFAULT FALSE,
           is_spoiler BOOLEAN DEFAULT FALSE,
-          status VARCHAR(255) NOT NULL,
+          status VARCHAR(255),
           is_nsfw BOOLEAN DEFAULT FALSE,  
           FOREIGN KEY (user_id) REFERENCES users (id),
           FOREIGN KEY (episode_id) REFERENCES episodes (id)

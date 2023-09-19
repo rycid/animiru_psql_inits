@@ -8,6 +8,7 @@ async function createUserBadgesTable(client: any) {
           id SERIAL PRIMARY KEY,
           user_id INT NOT NULL,
           badge_id INT NOT NULL,
+          date_earned TIMESTAMP NOT NULL DEFAULT NOW(),
           FOREIGN KEY (user_id) REFERENCES users (id),
           FOREIGN KEY (badge_id) REFERENCES badges (id)
         )

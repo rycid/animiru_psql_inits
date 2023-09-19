@@ -9,7 +9,7 @@ async function createEpisodeReportsTable(client: any) {
           user_id INT NOT NULL,
           episode_id INT NOT NULL,
           report_type VARCHAR(255) NOT NULL,
-          report_description VARCHAR(255) NOT NULL,
+          report_description TEXT NOT NULL,
           created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
           FOREIGN KEY (user_id) REFERENCES users (id),
           FOREIGN KEY (episode_id) REFERENCES episodes (id)         

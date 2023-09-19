@@ -10,7 +10,7 @@ async function createBadgesTable(client: any) {
           description VARCHAR(255) NOT NULL,
           image VARCHAR(255) NOT NULL,
           type VARCHAR(255) NOT NULL,
-          info_url VARCHAR(255) NOT NULL
+          info_url VARCHAR(255)
         )
         `;
   
